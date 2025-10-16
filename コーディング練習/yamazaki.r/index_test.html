@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>疑似検索システム（1） | コーディング力向上委員会［2025年10月16日～］</title>
+  <link rel="stylesheet" href="./css/sanitize.css">
+  <link rel="stylesheet" href="./css/style.css?ver=1.000.000">
+</head>
+<body>
+  <div class="container">
+    <div class="container-inner">
+      <header class="header gutters">
+        <div class="header-inner">
+          <h1 class="heading"><span class="heading-inner">疑似検索システム</span></h1>
+        </div>
+        <div class="header-inner">
+          <div class="form-form">
+            <form action="" class="form-inner">
+              <nav class="nav">
+                <div class="nav-inner">
+                  <ul class="list list-1st style-none">
+                    <li class="list-inner"><label class="label"><input type="radio" name="location" value="all" class="input" checked="checked"><span class="text-text">全区域</span></label></li>
+                    <li class="list-inner"><label class="label"><input type="radio" name="location" value="hita" class="input"><span class="text-text">北部</span></label></li>
+                    <li class="list-inner"><label class="label"><input type="radio" name="location" value="higashi" class="input"><span class="text-text">東部</span></label></li>
+                    <li class="list-inner"><label class="label"><input type="radio" name="location" value="minami" class="input"><span class="text-text">南部</span></label></li>
+                    <li class="list-inner"><label class="label"><input type="radio" name="location" value="nishi" class="input"><span class="text-text">西部</span></label></li>
+                  </ul>
+                </div>
+              </nav>
+              <div class="btn">
+                <div class="btn-inner">
+                  <div class="result"><span>検索</span></div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </header>
+
+      <main class="main gutters">
+        <div class="main-inner">
+          <div class="pkg">
+            <div class="pkg-inner all">
+              <ul class="card style-none">
+                <li class="card-inner view higashi">
+                  <header class="card-header">
+                    <div class="header-inner">
+                      <div class="zone"><span>東部</span></div>
+                      <h2 class="card-heading"><span class="heading-inner">にしむら</span></h2>
+                    </div>
+                  </header>
+                  <div class="card-body">
+                    <div class="body-inner">
+                      <div class="box">
+                        <p class="text-text">遺言・相続</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="card-inner view minami">
+                  <header class="card-header">
+                    <div class="header-inner">
+                      <div class="zone"><span>南部</span></div>
+                      <h2 class="card-heading"><span class="heading-inner">いのうえ</span></h2>
+                    </div>
+                  </header>
+                  <div class="card-body">
+                    <div class="body-inner">
+                      <div class="box">
+                        <p class="text-text">医療法人の設立</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="card-inner view minami">
+                  <header class="card-header">
+                    <div class="header-inner">
+                      <div class="zone"><span>南部</span></div>
+                      <h2 class="card-heading"><span class="heading-inner">	しみず</span></h2>
+                    </div>
+                  </header>
+                  <div class="card-body">
+                    <div class="body-inner">
+                      <div class="box">
+                        <p class="text-text">遺言・相続</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="card-inner view hita">
+                  <header class="card-header">
+                    <div class="header-inner">
+                      <div class="zone"><span>北部</span></div>
+                      <h2 class="card-heading"><span class="heading-inner">かとう</span></h2>
+                    </div>
+                  </header>
+                  <div class="card-body">
+                    <div class="body-inner">
+                      <div class="box">
+                        <p class="text-text">遺言・相続</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="card-inner view hita">
+                  <header class="card-header">
+                    <div class="header-inner">
+                      <div class="zone"><span>北部</span></div>
+                      <h2 class="card-heading"><span class="heading-inner">あんどう</span></h2>
+                    </div>
+                  </header>
+                  <div class="card-body">
+                    <div class="body-inner">
+                      <div class="box">
+                        <p class="text-text">会社等の設立</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="card-inner view hita">
+                  <header class="card-header">
+                    <div class="header-inner">
+                      <div class="zone"><span>北部</span></div>
+                      <h2 class="card-heading"><span class="heading-inner">さいとう</span></h2>
+                    </div>
+                  </header>
+                  <div class="card-body">
+                    <div class="body-inner">
+                      <div class="box">
+                        <p class="text-text">遺言・相続</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="card-inner view nishi">
+                  <header class="card-header">
+                    <div class="header-inner">
+                      <div class="zone"><span>西部</span></div>
+                      <h2 class="card-heading"><span class="heading-inner">きむら</span></h2>
+                    </div>
+                  </header>
+                  <div class="card-body">
+                    <div class="body-inner">
+                      <div class="box">
+                        <p class="text-text">遺言・相続</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="card-inner view higashi">
+                  <header class="card-header">
+                    <div class="header-inner">
+                      <div class="zone"><span>東部</span></div>
+                      <h2 class="card-heading"><span class="heading-inner">かたおか</span></h2>
+                    </div>
+                  </header>
+                  <div class="card-body">
+                    <div class="body-inner">
+                      <div class="box">
+                        <p class="text-text">成年後見</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="card-inner view nishi">
+                  <header class="card-header">
+                    <div class="header-inner">
+                      <div class="zone"><span>西部</span></div>
+                      <h2 class="card-heading"><span class="heading-inner">たけだ</span></h2>
+                    </div>
+                  </header>
+                  <div class="card-body">
+                    <div class="body-inner">
+                      <div class="box">
+                        <p class="text-text">医療法人の設立</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="card-inner view minami">
+                  <header class="card-header">
+                    <div class="header-inner">
+                      <div class="zone"><span>南部</span></div>
+                      <h2 class="card-heading"><span class="heading-inner">やまぐち</span></h2>
+                    </div>
+                  </header>
+                  <div class="card-body">
+                    <div class="body-inner">
+                      <div class="box">
+                        <p class="text-text">遺言・相続</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="card-inner view higashi">
+                  <header class="card-header">
+                    <div class="header-inner">
+                      <div class="zone"><span>東部</span></div>
+                      <h2 class="card-heading"><span class="heading-inner">いわさき</span></h2>
+                    </div>
+                  </header>
+                  <div class="card-body">
+                    <div class="body-inner">
+                      <div class="box">
+                        <p class="text-text">著作権登録</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="card-inner view higashi">
+                  <header class="card-header">
+                    <div class="header-inner">
+                      <div class="zone"><span>東部</span></div>
+                      <h2 class="card-heading"><span class="heading-inner">もり</span></h2>
+                    </div>
+                  </header>
+                  <div class="card-body">
+                    <div class="body-inner">
+                      <div class="box">
+                        <p class="text-text">会計記帳</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="card-inner view hita">
+                  <header class="card-header">
+                    <div class="header-inner">
+                      <div class="zone"><span>北部</span></div>
+                      <h2 class="card-heading"><span class="heading-inner">かい</span></h2>
+                    </div>
+                  </header>
+                  <div class="card-body">
+                    <div class="body-inner">
+                      <div class="box">
+                        <p class="text-text">運送業許可</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="card-inner view hita">
+                  <header class="card-header">
+                    <div class="header-inner">
+                      <div class="zone"><span>北部</span></div>
+                      <h2 class="card-heading"><span class="heading-inner">おくだ</span></h2>
+                    </div>
+                  </header>
+                  <div class="card-body">
+                    <div class="body-inner">
+                      <div class="box">
+                        <p class="text-text">会計記帳</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="card-inner view higashi">
+                  <header class="card-header">
+                    <div class="header-inner">
+                      <div class="zone"><span>東部</span></div>
+                      <h2 class="card-heading"><span class="heading-inner">ひらやま</span></h2>
+                    </div>
+                  </header>
+                  <div class="card-body">
+                    <div class="body-inner">
+                      <div class="box">
+                        <p class="text-text">産業廃棄物</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="card-inner view minami">
+                  <header class="card-header">
+                    <div class="header-inner">
+                      <div class="zone"><span>南部</span></div>
+                      <h2 class="card-heading"><span class="heading-inner">たむら</span></h2>
+                    </div>
+                  </header>
+                  <div class="card-body">
+                    <div class="body-inner">
+                      <div class="box">
+                        <p class="text-text">遺言・相続</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="card-inner view minami">
+                  <header class="card-header">
+                    <div class="header-inner">
+                      <div class="zone"><span>南部</span></div>
+                      <h2 class="card-heading"><span class="heading-inner">ひゅうが</span></h2>
+                    </div>
+                  </header>
+                  <div class="card-body">
+                    <div class="body-inner">
+                      <div class="box">
+                        <p class="text-text">古物営業</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="card-inner view higashi">
+                  <header class="card-header">
+                    <div class="header-inner">
+                      <div class="zone"><span>東部</span></div>
+                      <h2 class="card-heading"><span class="heading-inner">みうら</span></h2>
+                    </div>
+                  </header>
+                  <div class="card-body">
+                    <div class="body-inner">
+                      <div class="box">
+                        <p class="text-text">建設業関係</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="card-inner view nishi">
+                  <header class="card-header">
+                    <div class="header-inner">
+                      <div class="zone"><span>西部</span></div>
+                      <h2 class="card-heading"><span class="heading-inner">やまなか</span></h2>
+                    </div>
+                  </header>
+                  <div class="card-body">
+                    <div class="body-inner">
+                      <div class="box">
+                        <p class="text-text">宅建業関係</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="card-inner view nishi">
+                  <header class="card-header">
+                    <div class="header-inner">
+                      <div class="zone"><span>西部</span></div>
+                      <h2 class="card-heading"><span class="heading-inner">うえむら</span></h2>
+                    </div>
+                  </header>
+                  <div class="card-body">
+                    <div class="body-inner">
+                      <div class="box">
+                        <p class="text-text">遺言・相続</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="card-inner view nishi">
+                  <header class="card-header">
+                    <div class="header-inner">
+                      <div class="zone"><span>西部</span></div>
+                      <h2 class="card-heading"><span class="heading-inner">ふくやま</span></h2>
+                    </div>
+                  </header>
+                  <div class="card-body">
+                    <div class="body-inner">
+                      <div class="box">
+                        <p class="text-text">内容証明郵便</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="card-inner view higashi">
+                  <header class="card-header">
+                    <div class="header-inner">
+                      <div class="zone"><span>東部</span></div>
+                      <h2 class="card-heading"><span class="heading-inner">はら</span></h2>
+                    </div>
+                  </header>
+                  <div class="card-body">
+                    <div class="body-inner">
+                      <div class="box">
+                        <p class="text-text">会社等の設立</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="card-inner view higashi">
+                  <header class="card-header">
+                    <div class="header-inner">
+                      <div class="zone"><span>東部</span></div>
+                      <h2 class="card-heading"><span class="heading-inner">いしぐろ</span></h2>
+                    </div>
+                  </header>
+                  <div class="card-body">
+                    <div class="body-inner">
+                      <div class="box">
+                        <p class="text-text">遺言・相続</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="card-inner view hita">
+                  <header class="card-header">
+                    <div class="header-inner">
+                      <div class="zone"><span>北部</span></div>
+                      <h2 class="card-heading"><span class="heading-inner">ひだか</span></h2>
+                    </div>
+                  </header>
+                  <div class="card-body">
+                    <div class="body-inner">
+                      <div class="box">
+                        <p class="text-text">交通事故</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="card-inner view minami">
+                  <header class="card-header">
+                    <div class="header-inner">
+                      <div class="zone"><span>南部</span></div>
+                      <h2 class="card-heading"><span class="heading-inner">ながお</span></h2>
+                    </div>
+                  </header>
+                  <div class="card-body">
+                    <div class="body-inner">
+                      <div class="box">
+                        <p class="text-text">医療法人の設立</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="card-inner view minami">
+                  <header class="card-header">
+                    <div class="header-inner">
+                      <div class="zone"><span>南部</span></div>
+                      <h2 class="card-heading"><span class="heading-inner">すぎた</span></h2>
+                    </div>
+                  </header>
+                  <div class="card-body">
+                    <div class="body-inner">
+                      <div class="box">
+                        <p class="text-text">著作権登録</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="card-inner view minami">
+                  <header class="card-header">
+                    <div class="header-inner">
+                      <div class="zone"><span>南部</span></div>
+                      <h2 class="card-heading"><span class="heading-inner">かめおか</span></h2>
+                    </div>
+                  </header>
+                  <div class="card-body">
+                    <div class="body-inner">
+                      <div class="box">
+                        <p class="text-text">建設業関係</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="card-inner view higashi">
+                  <header class="card-header">
+                    <div class="header-inner">
+                      <div class="zone"><span>東部</span></div>
+                      <h2 class="card-heading"><span class="heading-inner">きりの</span></h2>
+                    </div>
+                  </header>
+                  <div class="card-body">
+                    <div class="body-inner">
+                      <div class="box">
+                        <p class="text-text">契約書</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="card-inner view nishi">
+                  <header class="card-header">
+                    <div class="header-inner">
+                      <div class="zone"><span>西部</span></div>
+                      <h2 class="card-heading"><span class="heading-inner">なつめ</span></h2>
+                    </div>
+                  </header>
+                  <div class="card-body">
+                    <div class="body-inner">
+                      <div class="box">
+                        <p class="text-text">示談書・告訴状</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="card-inner view hita">
+                  <header class="card-header">
+                    <div class="header-inner">
+                      <div class="zone"><span>北部</span></div>
+                      <h2 class="card-heading"><span class="heading-inner">とおみね</span></h2>
+                    </div>
+                  </header>
+                  <div class="card-body">
+                    <div class="body-inner">
+                      <div class="box">
+                        <p class="text-text">車庫証明</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="card-inner view minami">
+                  <header class="card-header">
+                    <div class="header-inner">
+                      <div class="zone"><span>南部</span></div>
+                      <h2 class="card-heading"><span class="heading-inner">てらおか</span></h2>
+                    </div>
+                  </header>
+                  <div class="card-body">
+                    <div class="body-inner">
+                      <div class="box">
+                        <p class="text-text">遺言・相続</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="card-inner view nishi">
+                  <header class="card-header">
+                    <div class="header-inner">
+                      <div class="zone"><span>西部</span></div>
+                      <h2 class="card-heading"><span class="heading-inner">かんざき</span></h2>
+                    </div>
+                  </header>
+                  <div class="card-body">
+                    <div class="body-inner">
+                      <div class="box">
+                        <p class="text-text">入管・永住</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="card-inner view nishi">
+                  <header class="card-header">
+                    <div class="header-inner">
+                      <div class="zone"><span>西部</span></div>
+                      <h2 class="card-heading"><span class="heading-inner">しおざわ</span></h2>
+                    </div>
+                  </header>
+                  <div class="card-body">
+                    <div class="body-inner">
+                      <div class="box">
+                        <p class="text-text">遺言・相続</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="card-inner view higashi">
+                  <header class="card-header">
+                    <div class="header-inner">
+                      <div class="zone"><span>東部</span></div>
+                      <h2 class="card-heading"><span class="heading-inner">おかじま</span></h2>
+                    </div>
+                  </header>
+                  <div class="card-body">
+                    <div class="body-inner">
+                      <div class="box">
+                        <p class="text-text">入管・永住・帰化</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="card-inner view higashi">
+                  <header class="card-header">
+                    <div class="header-inner">
+                      <div class="zone"><span>東部</span></div>
+                      <h2 class="card-heading"><span class="heading-inner">しみず</span></h2>
+                    </div>
+                  </header>
+                  <div class="card-body">
+                    <div class="body-inner">
+                      <div class="box">
+                        <p class="text-text">示談書・告訴状</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="card-inner view minami">
+                  <header class="card-header">
+                    <div class="header-inner">
+                      <div class="zone"><span>南部</span></div>
+                      <h2 class="card-heading"><span class="heading-inner">なかの</span></h2>
+                    </div>
+                  </header>
+                  <div class="card-body">
+                    <div class="body-inner">
+                      <div class="box">
+                        <p class="text-text">交通事故</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="card-inner view nishi">
+                  <header class="card-header">
+                    <div class="header-inner">
+                      <div class="zone"><span>西部</span></div>
+                      <h2 class="card-heading"><span class="heading-inner">すずき</span></h2>
+                    </div>
+                  </header>
+                  <div class="card-body">
+                    <div class="body-inner">
+                      <div class="box">
+                        <p class="text-text">風俗・食品衛生</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="card-inner view nishi">
+                  <header class="card-header">
+                    <div class="header-inner">
+                      <div class="zone"><span>西部</span></div>
+                      <h2 class="card-heading"><span class="heading-inner">ながた</span></h2>
+                    </div>
+                  </header>
+                  <div class="card-body">
+                    <div class="body-inner">
+                      <div class="box">
+                        <p class="text-text">運送業許可</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="card-inner view higashi">
+                  <header class="card-header">
+                    <div class="header-inner">
+                      <div class="zone"><span>東部</span></div>
+                      <h2 class="card-heading"><span class="heading-inner">さねやま</span></h2>
+                    </div>
+                  </header>
+                  <div class="card-body">
+                    <div class="body-inner">
+                      <div class="box">
+                        <p class="text-text">遺言・相続</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="card-inner view nishi">
+                  <header class="card-header">
+                    <div class="header-inner">
+                      <div class="zone"><span>西部</span></div>
+                      <h2 class="card-heading"><span class="heading-inner">ほり</span></h2>
+                    </div>
+                  </header>
+                  <div class="card-body">
+                    <div class="body-inner">
+                      <div class="box">
+                        <p class="text-text">宅建業関係</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="card-inner view minami">
+                  <header class="card-header">
+                    <div class="header-inner">
+                      <div class="zone"><span>南部</span></div>
+                      <h2 class="card-heading"><span class="heading-inner">よこた</span></h2>
+                    </div>
+                  </header>
+                  <div class="card-body">
+                    <div class="body-inner">
+                      <div class="box">
+                        <p class="text-text">医療法人の設立</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="card-inner view hita">
+                  <header class="card-header">
+                    <div class="header-inner">
+                      <div class="zone"><span>北部</span></div>
+                      <h2 class="card-heading"><span class="heading-inner">はせがわ</span></h2>
+                    </div>
+                  </header>
+                  <div class="card-body">
+                    <div class="body-inner">
+                      <div class="box">
+                        <p class="text-text">遺言・相続</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="card-inner view hita">
+                  <header class="card-header">
+                    <div class="header-inner">
+                      <div class="zone"><span>北部</span></div>
+                      <h2 class="card-heading"><span class="heading-inner">ふじい</span></h2>
+                    </div>
+                  </header>
+                  <div class="card-body">
+                    <div class="body-inner">
+                      <div class="box">
+                        <p class="text-text">著作権登録</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="card-inner view higashi">
+                  <header class="card-header">
+                    <div class="header-inner">
+                      <div class="zone"><span>東部</span></div>
+                      <h2 class="card-heading"><span class="heading-inner">いまむら</span></h2>
+                    </div>
+                  </header>
+                  <div class="card-body">
+                    <div class="body-inner">
+                      <div class="box">
+                        <p class="text-text">会社等の設立</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="card-inner view minami">
+                  <header class="card-header">
+                    <div class="header-inner">
+                      <div class="zone"><span>南部</span></div>
+                      <h2 class="card-heading"><span class="heading-inner">まつおか</span></h2>
+                    </div>
+                  </header>
+                  <div class="card-body">
+                    <div class="body-inner">
+                      <div class="box">
+                        <p class="text-text">車庫証明</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="card-inner view nishi">
+                  <header class="card-header">
+                    <div class="header-inner">
+                      <div class="zone"><span>西部</span></div>
+                      <h2 class="card-heading"><span class="heading-inner">かわもと</span></h2>
+                    </div>
+                  </header>
+                  <div class="card-body">
+                    <div class="body-inner">
+                      <div class="box">
+                        <p class="text-text">成年後見</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="card-inner view nishi">
+                  <header class="card-header">
+                    <div class="header-inner">
+                      <div class="zone"><span>西部</span></div>
+                      <h2 class="card-heading"><span class="heading-inner">ふじまき</span></h2>
+                    </div>
+                  </header>
+                  <div class="card-body">
+                    <div class="body-inner">
+                      <div class="box">
+                        <p class="text-text">会社等の設立</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="card-inner view minami">
+                  <header class="card-header">
+                    <div class="header-inner">
+                      <div class="zone"><span>南部</span></div>
+                      <h2 class="card-heading"><span class="heading-inner">つむら</span></h2>
+                    </div>
+                  </header>
+                  <div class="card-body">
+                    <div class="body-inner">
+                      <div class="box">
+                        <p class="text-text">産業廃棄物</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="card-inner view higashi">
+                  <header class="card-header">
+                    <div class="header-inner">
+                      <div class="zone"><span>東部</span></div>
+                      <h2 class="card-heading"><span class="heading-inner">くぼた</span></h2>
+                    </div>
+                  </header>
+                  <div class="card-body">
+                    <div class="body-inner">
+                      <div class="box">
+                        <p class="text-text">契約書</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="card-inner view higashi">
+                  <header class="card-header">
+                    <div class="header-inner">
+                      <div class="zone"><span>東部</span></div>
+                      <h2 class="card-heading"><span class="heading-inner">いけなが</span></h2>
+                    </div>
+                  </header>
+                  <div class="card-body">
+                    <div class="body-inner">
+                      <div class="box">
+                        <p class="text-text">著作権登録</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="card-inner view minami">
+                  <header class="card-header">
+                    <div class="header-inner">
+                      <div class="zone"><span>南部</span></div>
+                      <h2 class="card-heading"><span class="heading-inner">おかばやし</span></h2>
+                    </div>
+                  </header>
+                  <div class="card-body">
+                    <div class="body-inner">
+                      <div class="box">
+                        <p class="text-text">運送業許可</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="card-inner view nishi">
+                  <header class="card-header">
+                    <div class="header-inner">
+                      <div class="zone"><span>西部</span></div>
+                      <h2 class="card-heading"><span class="heading-inner">ふくずみ</span></h2>
+                    </div>
+                  </header>
+                  <div class="card-body">
+                    <div class="body-inner">
+                      <div class="box">
+                        <p class="text-text">入管・永住・帰化</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="card-inner view nishi">
+                  <header class="card-header">
+                    <div class="header-inner">
+                      <div class="zone"><span>西部</span></div>
+                      <h2 class="card-heading"><span class="heading-inner">しまだ</span></h2>
+                    </div>
+                  </header>
+                  <div class="card-body">
+                    <div class="body-inner">
+                      <div class="box">
+                        <p class="text-text">成年後見</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="card-inner view higashi">
+                  <header class="card-header">
+                    <div class="header-inner">
+                      <div class="zone"><span>東部</span></div>
+                      <h2 class="card-heading"><span class="heading-inner">すぎさき</span></h2>
+                    </div>
+                  </header>
+                  <div class="card-body">
+                    <div class="body-inner">
+                      <div class="box">
+                        <p class="text-text">会社等の設立</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer gutters">
+        <div class="foote-inner"></div>
+      </footer>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script>
+    $('.result').click(function() {
+      $('input[name="location"]').each(function() {
+        const cLocation = $(this).attr('value');
+        $('.pkg-inner').removeClass(cLocation);
+        const rLocation = $('input[name="location"]:checked').val();
+        $('.pkg-inner').addClass(rLocation);
+      });
+    })
+  </script>
+</body>
+</html>
