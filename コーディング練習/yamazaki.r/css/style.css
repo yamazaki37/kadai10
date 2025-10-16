@@ -334,6 +334,15 @@ ol.style-none {
   font-size: .95em;
   margin: 0;
 }
+.pkg-inner.hita .card-inner:not(.hita),
+.pkg-inner.higashi .card-inner:not(.higashi),
+.pkg-inner.minami .card-inner:not(.minami),
+.pkg-inner.nishi .card-inner:not(.nishi) {
+  display: none;
+}
+.pkg-inner.all .card-inner {
+  display: block;
+}
 
 
 
